@@ -1,6 +1,6 @@
 "use client";
 
-import { defaultModel, type modelID } from "@/ai/providers";
+import { DEFAULT_MODEL_ID } from "@/ai/providers";
 import { useChat } from "@ai-sdk/react";
 import { useState } from "react";
 import { Textarea } from "./textarea";
@@ -11,7 +11,7 @@ import { toast } from "sonner";
 
 export default function Chat() {
   const [input, setInput] = useState("");
-  const [selectedModel, setSelectedModel] = useState<modelID>(defaultModel);
+  const [selectedModel, setSelectedModel] = useState<string>(DEFAULT_MODEL_ID);
   const { sendMessage, messages, status, stop } = useChat({
     onError: (error) => {
       toast.error(

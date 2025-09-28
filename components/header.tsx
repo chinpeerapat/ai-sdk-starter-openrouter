@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { DeployButton } from "./deploy-button";
-import { XAiIcon } from "./icons";
+import { OpenRouterIcon } from "./icons";
 
 export const Header = () => {
   return (
@@ -53,9 +53,9 @@ export const Header = () => {
               <Link
                 className="flex flex-row items-end gap-2"
                 target="_blank"
-                href="https://x.ai"
+                href="https://openrouter.ai"
               >
-                <XAiIcon size={18} />
+                <OpenRouterIcon size={18} />
               </Link>
             </div>
           </span>

@@ -1,9 +1,9 @@
-<a href="https://ai-sdk-starter-xai.vercel.app">
-  <h1 align="center">Vercel x xAI Chatbot</h1>
+<a href="https://ai-sdk-starter-openrouter.vercel.app">
+  <h1 align="center">Vercel x OpenRouter Chatbot</h1>
 </a>
 
 <p align="center">
-  An open-source AI chatbot app template built with Next.js, the AI SDK by Vercel, and xAI.
+  An open-source AI chatbot app template built with Next.js, the AI SDK by Vercel, and OpenRouter.
 </p>
 
 <p align="center">
@@ -26,7 +26,7 @@
 
 You can deploy your own version to Vercel by clicking the button below:
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?project-name=Vercel+x+xAI+Chatbot&repository-name=ai-sdk-starter-xai&repository-url=https%3A%2F%2Fgithub.com%2Fvercel-labs%2Fai-sdk-starter-xai&demo-title=Vercel+x+xAI+Chatbot&demo-url=https%3A%2F%2Fai-sdk-starter-xai.labs.vercel.dev%2F&demo-description=A+simple+chatbot+application+built+with+Next.js+that+uses+xAI+via+the+AI+SDK+and+the+Vercel+Marketplace&products=[{%22type%22:%22integration%22,%22protocol%22:%22ai%22,%22productSlug%22:%22grok%22,%22integrationSlug%22:%22xai%22}])
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fchinpeerapat%2Fai-sdk-starter-openrouter&project-name=ai-sdk-starter-openrouter&env=OPENROUTER_API_KEY&demo-url=https%3A%2F%2Fai-sdk-starter-openrouter.vercel.app&demo-image=https%3A%2F%2Fraw.githubusercontent.com%2Fchinpeerapat%2Fai-sdk-starter-openrouter%2Fmain%2Fscreenshot.png)
 
 ## Running Locally
 

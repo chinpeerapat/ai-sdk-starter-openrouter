@@ -15,9 +15,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Vercel x xAI Chatbot",
+  title: "Vercel x Openrouter Chatbot",
   description:
-    "This starter project uses xAI with the AI SDK via the Vercel Marketplace",
+    "This starter project uses Openrouter with the AI SDK",
 };
 
 export default function RootLayout({

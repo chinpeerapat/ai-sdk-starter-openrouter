@@ -1,4 +1,4 @@
-import { model, type modelID } from "@/ai/providers";
+import { openrouter, DEFAULT_MODEL_ID } from "@/ai/providers";
 import { weatherTool } from "@/ai/tools";
 import { convertToModelMessages, stepCountIs, streamText, UIMessage } from "ai";
 
@@ -9,10 +9,14 @@ export async function POST(req: Request) {
   const {
     messages,
     selectedModel,
-  }: { messages: UIMessage[]; selectedModel: modelID } = await req.json();
+  }: { messages: UIMessage[]; selectedModel?: string } = await req.json();
+
+  const modelId = (selectedModel && selectedModel.length > 0)
+    ? selectedModel
+    : DEFAULT_MODEL_ID;
 
   const result = streamText({
-    model: model.languageModel(selectedModel),
+    model: openrouter(modelId),
     system: "You are a helpful assistant.",
     messages: convertToModelMessages(messages),
     stopWhen: stepCountIs(5), // enable multi-step agentic flow

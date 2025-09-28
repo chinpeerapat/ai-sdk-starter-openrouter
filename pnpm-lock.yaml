@@ -11,9 +11,9 @@ importers:
       '@ai-sdk/react':
         specifier: 2.0.0-beta.25
         version: 2.0.0-beta.25(react@19.1.0)(zod@3.25.76)
-      '@ai-sdk/xai':
-        specifier: 2.0.0-beta.8
-        version: 2.0.0-beta.8(zod@3.25.76)
+      '@openrouter/ai-sdk-provider':
+        specifier: ^1.2.0
+        version: 1.2.0(ai@5.0.0-beta.25(zod@3.25.76))(zod@3.25.76)
       '@opentelemetry/api-logs':
         specifier: ^0.200.0
         version: 0.200.0
@@ -129,12 +129,6 @@ packages:
     peerDependencies:
       zod: ^3.25.76 || ^4
 
-  '@ai-sdk/openai-compatible@1.0.0-beta.6':
-    resolution: {integrity: sha512-oQ9zBidXV9SeuqqJ+Dh82KmVqrR+uEj9ID/iHBP6Jtvy2tiuIZgzo8CNBcaWh6i0W3mOBXY+69+AvgZsImQX6A==}
-    engines: {node: '>=18'}
-    peerDependencies:
-      zod: ^3.25.49 || ^4
-
   '@ai-sdk/provider-utils@1.0.22':
     resolution: {integrity: sha512-YHK2rpj++wnLVc9vPGzGFP3Pjeld2MwhKinetA0zKXOoHAT/Jit5O8kZsxcSlJPu9wvcGT1UGZEjZrtO7PfFOQ==}
     engines: {node: '>=18'}
@@ -143,12 +137,6 @@ packages:
     peerDependenciesMeta:
       zod:
         optional: true
-
-  '@ai-sdk/provider-utils@3.0.0-beta.3':
-    resolution: {integrity: sha512-4gZ392GxjzMF7TnReF2eTKhOSyiSS3ydRVq4I7jxkeV5sdEuMoH3gzfItmlctsqGxlMU1/+zKPwl5yYz9O2dzg==}
-    engines: {node: '>=18'}
-    peerDependencies:
-      zod: ^3.25.49 || ^4
 
   '@ai-sdk/provider-utils@3.0.0-beta.5':
     resolution: {integrity: sha512-4Dv/wiGZrvO6fI7P0yMLa4XZru0XW8LPibTObbkHBdweLUVGIze7aCfxxQeY44Uqcbl/h6/yBTkx2XmPtwf/Ow==}
@@ -225,12 +213,6 @@ packages:
     peerDependenciesMeta:
       vue:
         optional: true
-
-  '@ai-sdk/xai@2.0.0-beta.8':
-    resolution: {integrity: sha512-tOOtcwG9yAPc52QhBPNUCcR34Il62ES2jAqVzJRT6+vqR/yBculUesjUYnVRZ5n9dseVgMRjDlNNbl+VQ39HaQ==}
-    engines: {node: '>=18'}
-    peerDependencies:
-      zod: ^3.25.49 || ^4
 
   '@alloc/quick-lru@5.2.0':
     resolution: {integrity: sha512-UrcABB+4bUrFABwbluTIBErXwvbsU/V7TZWfmbgJfbkwiBuziS9gxdODUyuiecfdGQ85jglMW6juS3+z5TsKLw==}
@@ -710,6 +692,13 @@ packages:
   '@nolyfill/is-core-module@1.0.39':
     resolution: {integrity: sha512-nn5ozdjYQpUCZlWGuxcJY/KpxkWQs4DcbMCmKojjyrYDEAGy4Ce19NN4v5MduafTwJlbKc99UA8YhSVqq9yPZA==}
     engines: {node: '>=12.4.0'}
+
+  '@openrouter/ai-sdk-provider@1.2.0':
+    resolution: {integrity: sha512-stuIwq7Yb7DNmk3GuCtz+oS3nZOY4TXEV3V5KsknDGQN7Fpu3KRMQVWRc1J073xKdf0FC9EHOctSyzsACmp5Ag==}
+    engines: {node: '>=18'}
+    peerDependencies:
+      ai: ^5.0.0
+      zod: ^3.24.1 || ^v4
 
   '@opentelemetry/api-logs@0.200.0':
     resolution: {integrity: sha512-IKJBQxh91qJ+3ssRly5hYEJ8NDHu9oY/B1PXVSCWf7zytmYO9RNLB0Ox9XQ/fJ8m6gY6Q6NtBWlmXfaXt5Uc4Q==}
@@ -3330,12 +3319,6 @@ snapshots:
       '@ai-sdk/provider-utils': 3.0.0-beta.5(zod@3.25.76)
       zod: 3.25.76
 
-  '@ai-sdk/openai-compatible@1.0.0-beta.6(zod@3.25.76)':
-    dependencies:
-      '@ai-sdk/provider': 2.0.0-beta.1
-      '@ai-sdk/provider-utils': 3.0.0-beta.3(zod@3.25.76)
-      zod: 3.25.76
-
   '@ai-sdk/provider-utils@1.0.22(zod@3.25.76)':
     dependencies:
       '@ai-sdk/provider': 0.0.26
@@ -3344,14 +3327,6 @@ snapshots:
       secure-json-parse: 2.7.0
     optionalDependencies:
       zod: 3.25.76
-
-  '@ai-sdk/provider-utils@3.0.0-beta.3(zod@3.25.76)':
-    dependencies:
-      '@ai-sdk/provider': 2.0.0-beta.1
-      '@standard-schema/spec': 1.0.0
-      eventsource-parser: 3.0.3
-      zod: 3.25.76
-      zod-to-json-schema: 3.24.5(zod@3.25.76)
 
   '@ai-sdk/provider-utils@3.0.0-beta.5(zod@3.25.76)':
     dependencies:
@@ -3429,13 +3404,6 @@ snapshots:
       vue: 3.5.13(typescript@5.8.3)
     transitivePeerDependencies:
       - zod
-
-  '@ai-sdk/xai@2.0.0-beta.8(zod@3.25.76)':
-    dependencies:
-      '@ai-sdk/openai-compatible': 1.0.0-beta.6(zod@3.25.76)
-      '@ai-sdk/provider': 2.0.0-beta.1
-      '@ai-sdk/provider-utils': 3.0.0-beta.3(zod@3.25.76)
-      zod: 3.25.76
 
   '@alloc/quick-lru@5.2.0': {}
 
@@ -3792,6 +3760,11 @@ snapshots:
       fastq: 1.19.1
 
   '@nolyfill/is-core-module@1.0.39': {}
+
+  '@openrouter/ai-sdk-provider@1.2.0(ai@5.0.0-beta.25(zod@3.25.76))(zod@3.25.76)':
+    dependencies:
+      ai: 5.0.0-beta.25(zod@3.25.76)
+      zod: 3.25.76
 
   '@opentelemetry/api-logs@0.200.0':
     dependencies:
